@@ -14,14 +14,16 @@ print('\nLembrando que você tem apenas 3 tentativas')
 
 tentativas = 0
 while True:
+    tentativas += 1
     num = int(input('Qual seu palpite?\n'))
-    if num == numpc:
+    if tentativas >= 3:
+        print('Acabou as tentativas')
+        break
+    elif num == numpc:
         print('Acertou com',tentativas,'tentativas!')
         break
     elif num > numpc:
         print('Mais baixo')
-        tentativas = tentativas + 1
     elif num < numpc:
         print('Mais alto')
-        tentativas = tentativas + 1
         
